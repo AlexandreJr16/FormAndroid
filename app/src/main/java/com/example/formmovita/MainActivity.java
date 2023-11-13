@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Switch comprouMovel, interesseMovel;
     private ToggleButton interesseRA;
     private Button enviarButton;
-    private List<Form> listaFormularios = new ArrayList<>(); // Inicialize a lista
+    private List<Form> listaFormularios = new ArrayList<>();
     private TextView nomeResult;
     private TextView telaResult;
     private TextView SexoResult;
@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Inicialize os elementos do layout
         nomeInput = findViewById(R.id.inputText);
         tela1Input = findViewById(R.id.tela1Input);
         tela2Input = findViewById(R.id.tela2Input);
@@ -59,6 +58,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clear() {
+        nomeInput.setText("");
+        tela1Input.setChecked(false);
+        tela2Input.setChecked(false);
+        tela3Input.setChecked(false);
+        mInput.setChecked(false);
+        fInput.setChecked(false);
+        comprouMovel.setChecked(false);
+        interesseMovel.setChecked(false);
+        interesseRA.setChecked(false);
+    }
+    public void limpar(View view) {
         nomeInput.setText("");
         tela1Input.setChecked(false);
         tela2Input.setChecked(false);
